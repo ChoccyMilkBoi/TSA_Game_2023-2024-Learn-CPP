@@ -1,12 +1,52 @@
+/* Foreword:
+So Ik y'all don't know a lick of this so I tried to make it also explain the basics of computer science too.
+Don't feel bad if you don't immediately get it, this stuff is like walking into a prison and trying to beat
+up the biggest guy in there if this is ur first programming language. Also it is a good practice whenever typing
+code in C++ to use what is called PascalCase or camelCase/lowerCamelCase when defining functions, these are typed as
+with PascalCase, where each word starts with an uppercase letter with underscores in between; and with lowerCamelCase,
+where the first word is all lower case and the rest start with upper and the rest of the letters per word are lowercase,
+with underscores in between each word.
+Examples:
+Pascal_Case_Functions_Be_Like
+lower_Camel_Case_Functions_Be_Like
+*/
+/* Foreword #2:
+Btw if ur reading this on visual studio code (Which btw you friggin should) please download the following extensions
+and also do the steps that I ask from y'all whilst y'all learn
+Extensions used in this program:
+  C/C++ extension pack by Microsoft:
+    This pack has all of the necessary tools and extensions for coding in C++
+  Code Runner:
+    This extension lets you run the code within Vs Code and also go into settings and look up a video on how to
+    get output into the terminal
+  Better Comments:
+    Get this so you can see all of the comments that I have left to be highlighted, this lets you make a comment
+    red or yellow to make sure it is read or is more eye-catching.
+  Better C++ Syntax:
+    This makes the syntax in C++ better color coded and easier to determine what a part of a program does or is
+  Themes for Better C++ Syntax:
+    I used the noctis obscuro theme with this, just look at the better comments' descripition and see what other
+    different themes are compatible and on there taht you like using
+*/
+/* Foreword #3
+Ok, I know this is a bit excessive, but if y'all wanna see the coding stuff that I'm explaining in action,
+! Look at the C++ learning miniprojects folder somewhere in the github to see the code working and in action
+! in a smaller instance like a console app like a calculator and other stuff I've made in there
+Please feel free to make your own miniprojects to learn and figure out on how to do and use all of this on a different
+folder with ur name on it so y'all can show what you've learned
+*/
+/* Foreword #4
+Damn it I need to put this in here to warn y'all that the various .json and .exe files are for vs code only
+! In unreal, you only use the .cpp file/C++ files
+*/
 #include <iostream>
 // For more information on how to use the various cmath math and arithmetic functions go to
 // www.cplusplus.com/reference/cmath/
 #include <bits/stdc++.h>
-
   // Namespaces allow for you to have multiple variables with the
   // same name, but with different values without overwriting them all
   // You prefix the namespace using variable with the name of the
-  // namespace, and add two colons, i.e. juan::x;
+  // namespace, and add two colons, i.e. std::cout;
   // The double colons are referred to as scope resolution operator.
   namespace juan{
     int x = 6;
@@ -384,9 +424,72 @@ int main(){
   From here to call this function to define a variable we'd run code like this
   int rand_num = rand();
   To get our randomized number to be less than a certain number,
-  we'd run the mudulus operator on the rand function and add 1
+  we'd run the modulus operator (%) on the rand function and add 1 like this:
+  int rand_D6 = (rand() % 6) + 1
   */
 
+  // Now for random events
+  // For random events we use the RNG function:
+  /*
+  rand_num = srand(time(NULL))
+  int rand_num = (rand() % 6) + 1
+  */
+  // After this, we'd create a switch with all the differing instances of the code and for
+  // Each of the differetn possible random numbers.
+  /*
+  switch(rand_num){
+    case 1:
+      some code
+    break;
+    case 2:
+      some more code
+    break;
+    case 3:
+      some more more code
+    break;
+    case 4:
+      some more more more code
+    break;
+    case 5:
+      some more more more more code
+    break;
+    case 6:
+      some more more more more more code
+    break;
+  }
+
+  */
+
+  // Now for functions
+  // We define normal functions by writing something like:
+  /* void Function_Name(){
+    some code
+  }
+  */
+  //! Please do note that it is common and good practice to define functions after the main function.
+  //! Also note that you ALWAYS defing functions outside of your main function.
+  // Now, to add information from within the main function, you'd define a function like:
+  /*
+  void Function_Name(Datatype Var_Name, OtherDataType Other_Var_Name){
+    some code that uses the defined vars
+  }
+  */
+  //! Look in my C++ learning miniprojects to see this in action
+  /* 
+  ! From now on I will put various lessons in their own folders and programs as it get harder,
+  ! and harder to explain what they do in just the comments of a single program that y'all won't read lol.
+  */
+  //* Returning keywords in a program is as simple as defining various strings and reusing them later on
+  //* in a function and then in a program ot define other strings or to create outputs
+  //* Concatenation is adding multpiple variables or data types in together in a string, like strings to strings,
+  //* or like with strings with ints.
+  /*
+  *    String ConcatStrings(string First_Name, string Last_Name);
+  ?    This line declares our function to concatenate strings together
+  *    string ConcatStrings(string First_Name, string Last_Name){
+  *    return First_Name + " " + Last_Name;
+  ?    This line defines the function and has it concatenate both strings with a space between them.
+  */
 
   // printing outputs and lists, testing functions, variables, and intellisense.
   // Use two consecutive < characters to separate what data types are being used in an output.
@@ -422,7 +525,7 @@ int main(){
   std::cout << "Now testing if statements and switches." << '\n' << "Now please give your age: ";
   std::cin >> age_of_person;
   if(age_of_person < 18){
-    std::cout << "WAIT YOU'RE A KID!? ME TOO BRO!" << '\n';
+    std::cout << "Being a minor is crazy" << '\n';
     bool adult_check = true;
   }
   else if(age_of_person >= 18){
