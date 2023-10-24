@@ -14,7 +14,7 @@ int main(){
     cout << "What's your last name? ";
     cin >> Last_Name;
     Full_Name = ConcatStrings(First_Name, Last_Name);
-    cout << "Hello " << Full_Name;
+    cout << "Hello " << Full_Name << endl;
     return 0;
 }
 string ConcatStrings(string First_Name, string Last_Name){
