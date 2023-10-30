@@ -43,6 +43,7 @@ Damn it I need to put this in here to warn y'all that the various .json and .exe
 // For more information on how to use the various cmath math and arithmetic functions go to
 // www.cplusplus.com/reference/cmath/
 #include <bits/stdc++.h>
+//! ^^^^^ Thanks Ethan Jeng for telling me this, this downloads all libraries.
   // Namespaces allow for you to have multiple variables with the
   // same name, but with different values without overwriting them all
   // You prefix the namespace using variable with the name of the
@@ -491,6 +492,23 @@ int main(){
   ?    This line defines the function and has it concatenate both strings with a space between them.
   */
 
+
+  /*
+  ? The way that we can do variable scope in a program is that whenever we have a function running inside of main,
+  ? and a variable defined inside of main, the function is considered a local variable to the main function,
+  ? and therefore can be used in any given function, if it is declared as usable within the main and the function.
+
+  ! If we define a variable within another function, it will narrow the scope of the variable, making it only usable
+  ! in the function that we end up defining it in.
+  
+  * If we declare a variable outside of main and outside of any other functions, it is considered global, and
+  * it can be used anywhere in the program.
+  
+  ? There is a hierarchy of varaibles too, being local to function, local to main, and global.
+  ! Also be aware that by using the scope resolution operator, we can have the hierarchy overridden straight to global.
+  */
+
+ 
   // printing outputs and lists, testing functions, variables, and intellisense.
   // Use two consecutive < characters to separate what data types are being used in an output.
   // Use two consecutive > characters to explain that you are doing a user input on that line.
