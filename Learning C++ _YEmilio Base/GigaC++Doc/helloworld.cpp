@@ -43,6 +43,7 @@ Damn it I need to put this in here to warn y'all that the various .json and .exe
 // For more information on how to use the various cmath math and arithmetic functions go to
 // www.cplusplus.com/reference/cmath/
 #include <bits/stdc++.h>
+//! ^^^^^ Thanks Ethan Jeng for telling me this, this downloads all libraries.
   // Namespaces allow for you to have multiple variables with the
   // same name, but with different values without overwriting them all
   // You prefix the namespace using variable with the name of the
