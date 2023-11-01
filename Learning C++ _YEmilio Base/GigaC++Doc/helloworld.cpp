@@ -508,7 +508,19 @@ int main(){
   ! Also be aware that by using the scope resolution operator, we can have the hierarchy overridden straight to global.
   */
 
- 
+
+  /* Array time
+  ?  Arrays are a data type that can hold multiple other pieces of data within them, with each having their own
+  ?  address within the array itself
+  *  here is an example of an array
+  */
+
+  std::string classschedule[] = {"Cross Country", "Tech Theatre","Comp Sci" , "Gemoetry", "HGAP", "English", "Bio"};
+
+  /*
+  ?  Arrays begin their addresses within themselves starting from 0 for the first one and counting one upwards from there.
+  */
+
   // printing outputs and lists, testing functions, variables, and intellisense.
   // Use two consecutive < characters to separate what data types are being used in an output.
   // Use two consecutive > characters to explain that you are doing a user input on that line.
@@ -579,8 +591,10 @@ int main(){
       std::cout << "Please run this program again and put y/n as an input." << '\n';
     break;
   }
-  
-
+  std::cout << "Here is my Schedule using a for loop and an array." << '\n';
+  for (int i; i < 7; i++ ){
+    std::cout << i + 1 << ". " << classschedule[i] << '\n';
+  }
 
 return 0;
 }
