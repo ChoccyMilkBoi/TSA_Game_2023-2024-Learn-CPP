@@ -521,6 +521,68 @@ int main(){
   ?  Arrays begin their addresses within themselves starting from 0 for the first one and counting one upwards from there.
   */
 
+  /*
+  ?  The sizeof() operator lets you see the size of a file, variable, or a function in bytes
+  ?  This is how we know that a certain data point may hold less RAM than others due to the 
+  ?  fact that we can allocate RAM and move around things in a program like RAM and we can do things 
+  ?  like certain things associated with allocating memory within a program.
+  !  Floats take up 4 bytes, doubles 8, booleans 1, characters 1, strings 1 per character.
+  !  Arrays are different as its the sum of all of the data values within them.
+  ?  By doing math with sizeof() and arrays and whatever data type they hold, we can get how many pieces
+  ?  of data are within an array.
+  */
+
+  /*
+  ?  By using this fact, we can use this with a for loop, dividing the array by the data types' size to get how
+  ?  many times should the for loop run throught itself and run the array, like in the class period thing in the 
+  ?  outputs below.
+  */
+
+  /*
+  ?  Passing an array into a function is as simple as putting its name into the function as with any other data
+  ?  type into an array of other types. To call a value within the array we have to call the values index 
+  *  Example 
+  */
+  /*
+  ? void function_name(data type Array_Name[]){
+  *   some code Array_Name[x]
+  ?   }
+  */
+  //? float function_name(Array_Name)
+  
+    /*
+  ?  By using a for each loop we can more easily iterate through an array.
+  !  For each loops while being easier to make, are less flexible and are slightly harder to use,
+  !  this is due to the fact that a for each loop cannot skip steps and can only use the increment operator
+  !  this means that a for each loop must run forward through its tasks, one at a time, no skipping.
+  */
+  std::string XC_Varsity[] = {"Travis ", "Derek ", "Josh ", "Cameron ", "Emilio", "James ", "Justice "};
+
+  //! Multidimensional arrays
+  /*
+  ? Ok this SOUNDS scary but it aint that bad
+  ? Both arrays that I just showed you are only one dimensional, being like this:
+  ? {Data, Data, Data}
+  * This is viewed like this:
+  ? [Data] [Data] [Data]
+  ! A multi dimensional array has 2 directions and is stored/ declared like this:
+  ? {{Data1, Data1, Data1}{Data2, Data2, Data2}{Data3, Data3, Data3}}
+  * It is viewed like this:
+  ? [Data1] [Data1] [Data1]
+  ? [Data2] [Data2] [Data2]
+  ? [Data3] [Data3] [Data3]
+  */
+  //! I'm switching gears from the video to sololearn here bc it's way faster.
+  //** Now time for pointers and memory allocation
+  /*
+  ? A pointer is a data type that holds the memory address of a variable, function, or array
+  ? for our examples I'm gonna be using p as the example pointer name.
+  
+  */
+  int *p;
+  int pointervar = 27;
+  int *p = &pointervar;
+
   // printing outputs and lists, testing functions, variables, and intellisense.
   // Use two consecutive < characters to separate what data types are being used in an output.
   // Use two consecutive > characters to explain that you are doing a user input on that line.
@@ -576,25 +638,30 @@ int main(){
 
   switch (hungychar){
     case 'y':
-      std::cout << "Ok cool you are hungry, go eat.";
+      std::cout << "Ok cool you are hungry, go eat.\n";
     break;
     case 'Y':
-      std::cout << "Ok cool you are hungry, go eat.";
+      std::cout << "Ok cool you are hungry, go eat.\n";
     break;
     case 'n':
-      std::cout << "Ok, don't eat more fatty lookin ahh";
+      std::cout << "Ok, don't eat more fatty lookin ahh\n";
     break;
     case 'N':
-      std::cout << "Ok, don't eat more fatty lookin ahh";
+      std::cout << "Ok, don't eat more fatty lookin ahh\n";
     break;
     default:
       std::cout << "Please run this program again and put y/n as an input." << '\n';
     break;
   }
   std::cout << "Here is my Schedule using a for loop and an array." << '\n';
-  for (int i; i < 7; i++ ){
+  for (int i; i < sizeof(classschedule)/sizeof(std::string); i++ ){
     std::cout << i + 1 << ". " << classschedule[i] << '\n';
   }
-
+  std::cout << "Now using a for each loop to show the XC varsity team.\n";
+  for (std::string runner: XC_Varsity){
+    std::cout << runner << '\n';
+  }
+  std::cout << "Now to test pointers and stuff: the current value of our var is 27. " << std::endl;
+  std::cout << p << std::endl;
 return 0;
 }
