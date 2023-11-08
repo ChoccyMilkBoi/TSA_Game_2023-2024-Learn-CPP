@@ -39,7 +39,8 @@ float Cube(float length){
 float Tesseract(float length){
     return length * length * length * length;
 }
-void Name_And_Age(std::string name,int age){
+// voids are functions
+void Name_And_Age(string name,int age){
     cout << "So your name is " << name;
     cout << " and you are " << age << " years old" << '\n' ; 
 }

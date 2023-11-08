@@ -21,7 +21,7 @@ int main(){
         cout << "3. Withdraw Money" << endl;
         cout << "4. Quit out" << endl;
         cin >> choice;
-        std::cin.clear();
+        cin.clear();
         fflush(stdin);
         switch (choice)
             {
