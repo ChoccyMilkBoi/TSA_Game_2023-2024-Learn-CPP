@@ -52,7 +52,7 @@ int main(){
 void showBalance(float balance){
     cout << "Your balance is: $" << setprecision(2) << fixed <<  balance << endl;
 /*                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-? This code up here restircts the decimal count of the number to the 2nd decimal place */
+? This code up here restricts the decimal count of the number to the 2nd decimal place */
 }
 float deposit(){
     float Depo_Amount = 0;
